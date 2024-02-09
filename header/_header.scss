@@ -1,0 +1,70 @@
+@mixin flex($justify: space-between,$items: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $items;
+}
+header{
+    height: 100vh;
+    nav{
+        padding: 2.3vh 0;
+        background-color: rgba(51, 51, 51, 0.75);
+        backdrop-filter: blur(3px);
+        .container{
+            @include flex();
+            i{
+                color: tomato;
+            }
+            ul{
+                @include flex();
+                li{
+                    margin-left: 80px;
+                    a{
+                        font-size: 18px;
+                        font-family: 'Inter Tight', sans-serif;
+                        color: tomato;
+                        position: relative;
+                        padding: 5px 0;
+                        overflow: hidden;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: -100%;
+                            width: 100%;
+                            height: 2px;
+                            transition: all 0.5s linear;
+                            background-color: tomato;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            right: -100%;
+                            width: 100%;
+                            height: 2px;
+                            transition: all 0.5s linear;
+                            background-color: tomato;
+                        }
+                        &:hover::before{
+                            left: 0;
+                        }
+                        &:hover::after{
+                            right: 0;
+                        }
+                    }
+                }
+            }
+            .menu_button{
+                i{
+                    border: 2px solid tomato;
+                    border-radius: 50%;
+                    padding: 4px;
+                    cursor: pointer;
+                    &:active{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

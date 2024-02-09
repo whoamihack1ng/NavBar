@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url("./images/orqa fon.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icons {
+  display: none;
+}
+
+.menu_button {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .container {
+    width: 90vw;
+    position: relative;
+  }
+  .container ul {
+    display: none !important;
+  }
+  .container .icons {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 90vw;
+  }
+}
+@media (min-width: 1200px) {
+  .container .menu_button {
+    display: block;
+  }
+}
+.block {
+  padding: 10px 0;
+  background-color: rgba(51, 51, 51, 0.75);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  position: absolute;
+  top: 62px;
+  right: -38px;
+  flex-direction: column;
+}
+.block li {
+  margin-right: 30px;
+}
+
+header {
+  height: 100vh;
+}
+header nav {
+  padding: 2.3vh 0;
+  background-color: rgba(51, 51, 51, 0.75);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+header nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .container i {
+  color: tomato;
+}
+header nav .container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .container ul li {
+  margin-left: 80px;
+}
+header nav .container ul li a {
+  font-size: 18px;
+  font-family: "Inter Tight", sans-serif;
+  color: tomato;
+  position: relative;
+  padding: 5px 0;
+  overflow: hidden;
+}
+header nav .container ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  transition: all 0.5s linear;
+  background-color: tomato;
+}
+header nav .container ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  transition: all 0.5s linear;
+  background-color: tomato;
+}
+header nav .container ul li a:hover::before {
+  left: 0;
+}
+header nav .container ul li a:hover::after {
+  right: 0;
+}
+header nav .container .menu_button i {
+  border: 2px solid tomato;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+}
+header nav .container .menu_button i:active {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

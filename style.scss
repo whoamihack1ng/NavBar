@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,p{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+body{
+    overflow-x: hidden;
+    background-image: url('./images/orqa\ fon.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icons{
+    display: none;
+}
+.menu_button{
+    display: none;
+}
+@media (min-width: 0px) and (max-width: 768px){
+    .container{
+        width: 90vw;
+        position: relative;
+        ul{
+            display: none !important;
+        }
+        .icons{
+            display: block !important;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .container{
+        width: 90vw;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        .menu_button{
+            display: block;
+        }
+    }
+}
+.block{
+    padding: 10px 0;
+    background-color: rgba(51, 51, 51, 0.75);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    top: 62px;
+    right: -38px;
+    flex-direction: column;
+    li{
+        margin-right: 30px;
+    }
+}
+@import "./header/header";
